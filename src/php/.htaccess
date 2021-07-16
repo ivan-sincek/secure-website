@@ -1,0 +1,5 @@
+Deny From All
+
+<FilesMatch "^sign_out\.php$">
+	Allow From All
+</FilesMatch>

@@ -1,0 +1,24 @@
+Options All -Indexes
+
+ErrorDocument 400 /error.php
+ErrorDocument 401 /error.php
+ErrorDocument 403 /error.php
+ErrorDocument 404 /error.php
+ErrorDocument 500 /error.php
+
+ServerSignature Off
+
+<IfModule mod_headers.c>
+	Header set X-Frame-Options "DENY"
+	Header set Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'"
+	Header set X-Content-Type-Options "nosniff"
+	Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+php_flag display_errors Off
+php_flag display_startup_errors Off
+php_flag file_uploads Off
+php_flag session.cookie_httponly 1
+php_flag session.use_strict_mode 1
+php_value session.name "sws_session"
+php_value session.cookie_lifetime 86400
