@@ -1,0 +1,11 @@
+username: admin
+password: securewebsite
+role: admin (ID 1)
+
+username: moderator
+password: securewebsite
+role: moderator (ID 2)
+
+username: user
+password: securewebsite
+role: user (ID 3)
